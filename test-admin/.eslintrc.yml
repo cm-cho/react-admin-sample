@@ -1,0 +1,29 @@
+---
+root: true
+parser: "@typescript-eslint/parser"
+env:
+  es6: true
+  browser: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+plugins:
+  - "@typescript-eslint"
+  - jest
+rules:
+  react/prop-types: 0
+  typescript-eslint/explicit-module-boundary-types: 0
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error
+  semi: 0
+  typescript-eslint/semi": off
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 11
+  sourceType: module
+  project: ./tsconfig.json
